@@ -47,3 +47,13 @@
     - E' possibile usare questa feature dei numeri di versione ai commit
     - git tag -a <nometag>, crea un tag annotato, che include anche chi ha creato il tag, la data in cui è stato creato e un commento
     - Il tag può essere usato ovunque può essere usato l'ID del commit 
+
+6) git rm <nomefile>, rimuove un file tracciato
+    - git rm --cached <nomefile>, rimuove il file dal tree ma non lo elimina
+
+7) git mv, sposta un file tracciato
+    - Spostandolo solo con mv git lo vede come una rimozione e un'aggiunta nella nuova posizione
+
+8) git log, mostra la history dei commit
+
+9) git show <commit (o ID)>, mostra uno specifico commit
