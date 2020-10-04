@@ -1,3 +1,3 @@
 # Demo
 
-some word, Ollare ollare
+some word
