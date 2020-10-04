@@ -20,3 +20,23 @@
     - Il file accetta sia nomi completi che globbing e supporta la negazione:
         - *.txt (escludi tutti i file che finiscono con .txt)
         - !non_ignorarmi.txt (... ma non il file non_ignorarmi.txt) 
+    - Best practice: non committare ("eseguire l'azione di commit", ovvero "creare una nuova revisione su un sistema di gestione condivisa di codice sorgente".)
+      file binari e file che si possano ricreare nel processo di build
+        - quindi se lavoriamo ad un programma C committeremo solo il sorgente
+    - Attenzione: .gitignore è un file del vostro repository, quindi va addato e committato
+
+4) git commit:
+    - Crea un commit contenente le modifiche che sono nella staging area
+    - Di default apre un editor di testo per permettere di digitare il messaggio di commit
+        - git commit -m "messaggio di commit" lo fa senza aprire l'editor di testo
+    - Best practice: i messaggi di commit devono avere senso:
+        - "fatte varie cose" <--- Nope
+        - Di solito la loro significatività è direttamente propozionale al tempo che manca alla deadline
+
+    - I commit in Git sono velocissimi da fare, quindi è molto meglio farne tanti e piccoli
+        - Evitare cose come "Riscritta tutta la funzione A e aggiunta funzione B e migliorata funzione C"
+        - Seguendo questa pratica si può trovare più facilmente il punto in cui si è rotto qualcosa
+        - ... ed annullare solo il pezzo che rompe tutto
+    - Ogni commit è identificato univocamente da un id
+    - Di solito (date le proprietà degli hash) se vogliamo riferirci ad un specifico commit bastano le prime 6 o 7 cifre dell'hash
+    - Se vogliamo possiamo dare dei nomi a degli specifici commit
