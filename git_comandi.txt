@@ -58,7 +58,10 @@
 
 9) git show <commit (o ID)>, mostra uno specifico commit
 
-asd
+10) git diff, mostra il diff (la differenza tra due file) tra le modifiche già nelle staging area e quelle non ancora in staging area
+    - git diff --staged, mostra il diff tra l'ultimo commit e la staging area
 
+11) git reset, toglie tutto dalla staging area (le modifiche rimangono)
+    - git reset --hard, riporta tutti i file allo stato in cui erano all'ultimo commit (si perdono tutte le modifiche)
 
-ds
+12) git blame <nomefile>, mostra il file con il commit e l'autore che hanno generato ogni singola riga
