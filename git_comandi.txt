@@ -1,0 +1,22 @@
+1) git status: mostra una serie di informazioni:
+    - su che branch (ramo) siete
+    - Se siete "avanti" o "indietro" rispetto al branch remoto che state tracciando
+    - I file modificati non ancora nella staging area (area di sosta)
+    - I file nuovi non ancora tracciati
+    - I file tracciati che sono stati rimossi
+
+2) git add:
+    - Serve per spostare le modifiche nella staging area o per cominicare a tracciare file non tracciati
+    - Va fatto con i file che volete siano compresi nel prossimo commit
+    - git add <file>
+        - Se <file> è una cartella, aggiunge ricorsivamente tutte le modifiche contenute in essa
+    - git add -a, aggiunge tutte le modifiche sui file già tracciati
+    - git add -A, come sopra ma aggiunge anche i file non ancora tracciati
+    - Attenzione: git add non aggiunge il file alla staging area, aggiunge le modifiche fatte al file nel momento in cui viene eseguito il comando
+        - Se successivamente modifichiamo ancora quel file e non rifacciamo git add, il commit successivo conterrà solo le prime modifiche
+    
+3) .gitignore:
+    - Per dichiarare a Git i file che vogliamo esplecitamente ignorare, dobbiamo inserirli nel file .gitignore nella root del repository
+    - Il file accetta sia nomi completi che globbing e supporta la negazione:
+        - *.txt (escludi tutti i file che finiscono con .txt)
+        - !non_ignorarmi.txt (... ma non il file non_ignorarmi.txt) 
