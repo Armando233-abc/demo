@@ -40,3 +40,10 @@
     - Ogni commit è identificato univocamente da un id
     - Di solito (date le proprietà degli hash) se vogliamo riferirci ad un specifico commit bastano le prime 6 o 7 cifre dell'hash
     - Se vogliamo possiamo dare dei nomi a degli specifici commit
+
+5) git tag:
+    - git tag <nometag>, assegna il tag all'ultimo commit
+        - git tag <nometag> <id del commit>, assegna il tag al commit specificato
+    - E' possibile usare questa feature dei numeri di versione ai commit
+    - git tag -a <nometag>, crea un tag annotato, che include anche chi ha creato il tag, la data in cui è stato creato e un commento
+    - Il tag può essere usato ovunque può essere usato l'ID del commit 
