@@ -57,3 +57,5 @@
 8) git log, mostra la history dei commit
 
 9) git show <commit (o ID)>, mostra uno specifico commit
+
+asd
