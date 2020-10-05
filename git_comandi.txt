@@ -64,4 +64,14 @@
 11) git reset, toglie tutto dalla staging area (le modifiche rimangono)
     - git reset --hard, riporta tutti i file allo stato in cui erano all'ultimo commit (si perdono tutte le modifiche)
 
-12) git blame <nomefile>, mostra il file con il commit e l'autore che hanno generato ogni singola riga
+12) git blame <nomefile>
+    - mostra il file con il commit e l'autore che hanno generato ogni singola riga
+
+13) git branch:
+    - retsituisce i branch presenti
+
+14) git checkout -b <nome branch>:
+    - crea un nuovo branch
+
+15) git checkout <nome branch>:
+    - cambia branch
