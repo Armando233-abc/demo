@@ -78,6 +78,6 @@
 15) git checkout <nome branch>:
     - cambia branch
 
-16) git merge:
+16) git merge <nome_branch>:
     - Serve ad unire due rami
 
