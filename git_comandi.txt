@@ -69,6 +69,8 @@
 
 13) git branch:
     - retsituisce i branch presenti
+    git branch -d <nome_branch>:
+        - Elimina il ramo
 
 14) git checkout -b <nome branch>:
     - crea un nuovo branch
@@ -78,3 +80,4 @@
 
 16) git merge:
     - Serve ad unire due rami
+
