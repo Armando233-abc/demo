@@ -78,3 +78,5 @@
 
 16) git merge:
     - Serve ad unire due rami
+
+17) questo testo è presente nel branch
