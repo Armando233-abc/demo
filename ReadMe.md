@@ -83,3 +83,5 @@
 16) git merge <nome_branch>:
     - Serve ad unire due rami
 
+17) git pull:
+    - git pull: Recupera e integra con un altro repository o un ramo locale 
