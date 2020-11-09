@@ -85,3 +85,6 @@
 
 18) git remote
     - Gestisce i link del server git remoto
+    
+17) git pull:
+    - git pull: Recupera e integra con un altro repository o un ramo locale 
