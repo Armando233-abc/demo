@@ -83,3 +83,5 @@
 16) git merge <nome_branch>:
     - Serve ad unire due rami
 
+18) git remote
+    - Gestisce i link del server git remoto
