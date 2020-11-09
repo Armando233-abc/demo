@@ -1,3 +1,83 @@
-# Demo
+1) git status: mostra una serie di informazioni:
+    - su che branch (ramo) siete
+    - Se siete "avanti" o "indietro" rispetto al branch remoto che state tracciando
+    - I file modificati non ancora nella staging area (area di sosta)
+    - I file nuovi non ancora tracciati
+    - I file tracciati che sono stati rimossi
 
-some word
+2) git add:
+    - Serve per spostare le modifiche nella staging area o per cominicare a tracciare file non tracciati
+    - Va fatto con i file che volete siano compresi nel prossimo commit
+    - git add <file>
+        - Se <file> è una cartella, aggiunge ricorsivamente tutte le modifiche contenute in essa
+    - git add -a, aggiunge tutte le modifiche sui file già tracciati
+    - git add -A, come sopra ma aggiunge anche i file non ancora tracciati
+    - Attenzione: git add non aggiunge il file alla staging area, aggiunge le modifiche fatte al file nel momento in cui viene eseguito il comando
+        - Se successivamente modifichiamo ancora quel file e non rifacciamo git add, il commit successivo conterrà solo le prime modifiche
+    
+3) .gitignore:
+    - Per dichiarare a Git i file che vogliamo esplecitamente ignorare, dobbiamo inserirli nel file .gitignore nella root del repository
+    - Il file accetta sia nomi completi che globbing e supporta la negazione:
+        - *.txt (escludi tutti i file che finiscono con .txt)
+        - !non_ignorarmi.txt (... ma non il file non_ignorarmi.txt) 
+    - Best practice: non committare ("eseguire l'azione di commit", ovvero "creare una nuova revisione su un sistema di gestione condivisa di codice sorgente".)
+      file binari e file che si possano ricreare nel processo di build
+        - quindi se lavoriamo ad un programma C committeremo solo il sorgente
+    - Attenzione: .gitignore è un file del vostro repository, quindi va addato e committato
+
+4) git commit:
+    - Crea un commit contenente le modifiche che sono nella staging area
+    - Di default apre un editor di testo per permettere di digitare il messaggio di commit
+        - git commit -m "messaggio di commit" lo fa senza aprire l'editor di testo
+    - Best practice: i messaggi di commit devono avere senso:
+        - "fatte varie cose" <--- Nope
+        - Di solito la loro significatività è direttamente propozionale al tempo che manca alla deadline
+
+    - I commit in Git sono velocissimi da fare, quindi è molto meglio farne tanti e piccoli
+        - Evitare cose come "Riscritta tutta la funzione A e aggiunta funzione B e migliorata funzione C"
+        - Seguendo questa pratica si può trovare più facilmente il punto in cui si è rotto qualcosa
+        - ... ed annullare solo il pezzo che rompe tutto
+    - Ogni commit è identificato univocamente da un id
+    - Di solito (date le proprietà degli hash) se vogliamo riferirci ad un specifico commit bastano le prime 6 o 7 cifre dell'hash
+    - Se vogliamo possiamo dare dei nomi a degli specifici commit
+
+5) git tag:
+    - git tag <nometag>, assegna il tag all'ultimo commit
+        - git tag <nometag> <id del commit>, assegna il tag al commit specificato
+    - E' possibile usare questa feature dei numeri di versione ai commit
+    - git tag -a <nometag>, crea un tag annotato, che include anche chi ha creato il tag, la data in cui è stato creato e un commento
+    - Il tag può essere usato ovunque può essere usato l'ID del commit 
+
+6) git rm <nomefile>, rimuove un file tracciato
+    - git rm --cached <nomefile>, rimuove il file dal tree ma non lo elimina
+
+7) git mv, sposta un file tracciato
+    - Spostandolo solo con mv git lo vede come una rimozione e un'aggiunta nella nuova posizione
+
+8) git log, mostra la history dei commit
+
+9) git show <commit (o ID)>, mostra uno specifico commit
+
+10) git diff, mostra il diff (la differenza tra due file) tra le modifiche già nelle staging area e quelle non ancora in staging area
+    - git diff --staged, mostra il diff tra l'ultimo commit e la staging area
+
+11) git reset, toglie tutto dalla staging area (le modifiche rimangono)
+    - git reset --hard, riporta tutti i file allo stato in cui erano all'ultimo commit (si perdono tutte le modifiche)
+
+12) git blame <nomefile>
+    - mostra il file con il commit e l'autore che hanno generato ogni singola riga
+
+13) git branch:
+    - retsituisce i branch presenti
+    git branch -d <nome_branch>:
+        - Elimina il ramo
+
+14) git checkout -b <nome branch>:
+    - crea un nuovo branch
+
+15) git checkout <nome branch>:
+    - cambia branch
+
+16) git merge <nome_branch>:
+    - Serve ad unire due rami
+
